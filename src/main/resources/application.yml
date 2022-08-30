@@ -1,0 +1,10 @@
+server:
+  port: 8000
+dph:
+  name: dupenghao
+  age: "12"
+  address: 河南省郑州市
+logging:
+  level:
+    root: info
+    com.dupenghao: debug
