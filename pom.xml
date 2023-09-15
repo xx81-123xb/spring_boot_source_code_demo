@@ -18,6 +18,12 @@
 	</properties>
 	<dependencies>
 
+		<!--<dependency>-->
+			<!--<groupId>io.github.yezhihao</groupId>-->
+			<!--<artifactId>protostar</artifactId>-->
+			<!--<version>3.0.2</version>-->
+		<!--</dependency>-->
+
 		<dependency>
 			<groupId>com.dupenghao</groupId>
 			<artifactId>commons</artifactId>
@@ -103,7 +109,24 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.22</version>
+        </dependency>
+
+		<dependency>
+			<groupId>com.dupenghao</groupId>
+			<artifactId>util</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-indexer</artifactId>
+			<optional>true</optional>
+		</dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

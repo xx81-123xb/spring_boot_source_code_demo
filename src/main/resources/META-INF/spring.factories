@@ -1,0 +1,12 @@
+com.dupenghao.a41.A41_1$MyImportSelector=\
+com.dupenghao.a41.A41_1.AutoConfiguration1,\
+com.dupenghao.a41.A41_1.AutoConfiguration2
+
+com.dupenghao.a41.A41_2$MyImportSelector=\
+com.dupenghao.a41.A41_2.AutoConfiguration1,\
+com.dupenghao.a41.A41_2.AutoConfiguration2
+
+
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#com.dupenghao.a41.A41_2.AutoConfiguration1,\
+#com.dupenghao.a41.A41_2.AutoConfiguration2

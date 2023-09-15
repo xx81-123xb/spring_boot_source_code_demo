@@ -9,7 +9,7 @@ public class TestBeanWrapper {
         // 利用反射原理, 为 bean 的属性赋值
         MyBean target = new MyBean();
         BeanWrapperImpl wrapper = new BeanWrapperImpl(target);
-        wrapper.setPropertyValue("a", "10");
+        wrapper.setPropertyValue("a", "0x10");
         wrapper.setPropertyValue("b", "hello");
         wrapper.setPropertyValue("c", "1999/03/04");
         System.out.println(target);

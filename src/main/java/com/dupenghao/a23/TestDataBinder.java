@@ -13,7 +13,7 @@ public class TestDataBinder {
         DataBinder dataBinder = new DataBinder(target);
         dataBinder.initDirectFieldAccess();
         MutablePropertyValues pvs = new MutablePropertyValues();
-        pvs.add("a", "10");
+        pvs.add("a", "0x10");
         pvs.add("b", "hello");
         pvs.add("c", "1999/03/04");
         dataBinder.bind(pvs);

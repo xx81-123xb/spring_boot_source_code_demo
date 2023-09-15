@@ -14,6 +14,7 @@ public class Step4 {
         env.getPropertySources().addLast(
                 new ResourcePropertySource("step4", new ClassPathResource("step4.properties"))
         );
+        //加入特殊的source源(优先级最高).达成效果是:可以匹配更多的分隔符从而找到键不完全匹配的键值对 原理是统一转换为用'-'分隔的
         ConfigurationPropertySources.attach(env);
         for (PropertySource<?> ps : env.getPropertySources()) {
             System.out.println(ps);

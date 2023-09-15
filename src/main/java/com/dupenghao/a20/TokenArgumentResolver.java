@@ -6,18 +6,23 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+/**
+ * Created by 杜鹏豪 on 2022/8/31.
+ */
 public class TokenArgumentResolver implements HandlerMethodArgumentResolver {
     @Override
-    // 是否支持某个参数
-    public boolean supportsParameter(MethodParameter parameter) {
-        Token token = parameter.getParameterAnnotation(Token.class);
-        return token != null;
+    public boolean supportsParameter(MethodParameter methodParameter) {
+        Token token = methodParameter.getParameterAnnotation(Token.class);
+//        System.out.println("==============================================");
+//        System.out.println(token);
+        return token!=null;
     }
 
     @Override
-    // 解析参数
-    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
-                                  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-        return webRequest.getHeader("token");
+    //解析参数
+    public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
+        String token = nativeWebRequest.getHeader("token");
+        System.out.println(token);
+        return token;
     }
 }
