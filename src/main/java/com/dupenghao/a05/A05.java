@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.ClassPathResource;
@@ -23,7 +26,6 @@ public class A05 {
     private static final Logger log = LoggerFactory.getLogger(A05.class);
 
     public static void main(String[] args) throws IOException {
-
         // ⬇️GenericApplicationContext 是一个【干净】的容器
         GenericApplicationContext context = new GenericApplicationContext();
         context.registerBean("config", Config.class);
@@ -32,7 +34,7 @@ public class A05 {
 //            bd.getPropertyValues().add("basePackage", "com.dupenghao.a05.mapper");
 //        });
 
-//        context.registerBean(ComponentScanPostProcessor.class); // 解析 @ComponentScan
+        context.registerBean(ComponentScanPostProcessor.class); // 解析 @ComponentScan
 
 //        context.registerBean(AtBeanPostProcessor.class); // 解析 @Bean
 //        context.registerBean(MapperPostProcessor.class); // 解析 Mapper 接口
